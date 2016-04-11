@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <import type="com.codepath.flicks.models.Movie" />
+        <variable name="movie" type="com.codepath.flicks.models.Movie"/>
+    </data>
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/movie_items_vertical_margin" >
+
+        <ImageView
+            android:layout_width="@dimen/backdrop_width"
+            android:layout_height="@dimen/backdrop_height"
+            android:scaleType="centerCrop"
+            android:id="@+id/ivMovieImage"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/movie_image_margin_right"
+            app:imageUrl="@{movie.backdropPath}"
+            tools:src="@mipmap/popcorn_icon"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/play_btn_height"
+            android:layout_marginTop="@dimen/play_btn_top_margin"
+            android:layout_alignEnd="@+id/ivMovieImage"
+            android:layout_alignRight="@+id/ivMovieImage"
+            android:src="@drawable/play_button"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_toRightOf="@+id/ivMovieImage"
+            android:text="@{movie.getTitle()}"
+            android:id="@+id/tvTitle"
+            style="@style/White"
+            android:layout_marginBottom="@dimen/movie_details_margin" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{movie.getOverview()}"
+            android:layout_toRightOf="@+id/ivMovieImage"
+            android:id="@+id/tvOverview"
+            android:layout_below="@+id/tvTitle"
+            style="@style/White"/>
+    </RelativeLayout>
+</layout>
