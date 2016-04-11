@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flicks</string>
+    <string name="release_date">Release date:</string>
+    <string name="rating">User rating:</string>
+</resources>

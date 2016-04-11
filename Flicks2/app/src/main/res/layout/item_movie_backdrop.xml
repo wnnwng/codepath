@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="movie" type="com.codepath.flicks.models.Movie"/>
+    </data>
+
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/movie_items_vertical_margin">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/backdrop_height"
+            android:scaleType="centerCrop"
+            app:imageUrl="@{movie.backdropPath}"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/play_btn_height"
+            android:layout_marginTop="@dimen/play_btn_top_margin"
+            android:src="@drawable/play_button"/>
+    </RelativeLayout>
+</layout>
