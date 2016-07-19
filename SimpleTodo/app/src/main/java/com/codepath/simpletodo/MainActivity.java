@@ -1,6 +1,7 @@
 package com.codepath.simpletodo;
 
 import android.content.Intent;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,7 +23,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements EditItemDialogFragment.EditItemDialogListener {
     List<String> items;
     List<TodoItem> itemsSql;
     ArrayAdapter<String> itemsAdapter;
@@ -68,10 +69,11 @@ public class MainActivity extends AppCompatActivity {
         lvItems.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(MainActivity.this, EditItemActivity.class);
-                i.putExtra("todoText", items.get(position));
-                i.putExtra("todoPos", position);
-                startActivityForResult(i, REQUEST_CODE);
+                showEditDialog(position, items.get(position));
+//                Intent i = new Intent(MainActivity.this, EditItemActivity.class);
+//                i.putExtra("todoText", items.get(position));
+//                i.putExtra("todoPos", position);
+//                startActivityForResult(i, REQUEST_CODE);
             }
         });
     }
@@ -121,6 +123,13 @@ public class MainActivity extends AppCompatActivity {
         items.set(pos, text);
         itemSql.text = text;
         itemSql.save();
+        itemsAdapter.notifyDataSetChanged();
+    }
+
+    private void showEditDialog(int position, String originalText) {
+        FragmentManager fm = getSupportFragmentManager();
+        EditItemDialogFragment editItemDialogFragment = EditItemDialogFragment.newInstance("Edit your item", position, originalText);
+        editItemDialogFragment.show(fm, "fragment_edit_name");
     }
 
     @Override
@@ -129,7 +138,11 @@ public class MainActivity extends AppCompatActivity {
             String todoText = data.getExtras().getString("todoText").toString();
             int position = data.getExtras().getInt("todoPos");
             updateItem(todoText, position);
-            itemsAdapter.notifyDataSetChanged();
         }
+    }
+
+    @Override
+    public void onFinishEditDialog(String inputText, int position) {
+        updateItem(inputText, position);
     }
 }
