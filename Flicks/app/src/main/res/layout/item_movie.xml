@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp" >
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ivMovieImage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerInParent="true"
+        android:paddingRight="12dp"
+        tools:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:text="Large Text"
+        android:id="@+id/tvTitle"
+        android:layout_toRightOf="@+id/ivMovieImage"
+        style="@style/White"
+        android:paddingBottom="8dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="02 01:29:01.114 28446-28446/com.codepath.flicks W/JsonHttpRH: onSuccess(int, Header[], JSONObject) was not overriden, but callback was received
+08-02 01:29:02.184 28446-28451/com.codepath.flicks D/dder[], JSONObject) was not overriden, but callback was received
+08-02 01:32:01.767 28446-28459/com.codepath.flicks D/dalvikvm: GC_FOR_ALLOC freed 1417K, 9% "
+        android:id="@+id/tvOverview"
+        android:layout_below="@+id/tvTitle"
+        android:layout_toRightOf="@+id/ivMovieImage"
+        style="@style/White"
+        android:paddingBottom="8dp"/>
+</RelativeLayout>
