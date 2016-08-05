@@ -1,8 +1,8 @@
-# Project 1 - *Name of App Here*
+# Project 2 - Flicks
 
-**Name of your app** shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
+Flicks shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
-Time spent: **X** hours spent in total
+Time spent: 30 hours spent in total
 
 ## User Stories
 
@@ -33,23 +33,15 @@ The following **stretch** features are implemented:
 * [ ] Apply the popular [Butterknife annotation library](http://guides.codepath.com/android/Reducing-View-Boilerplate-with-Butterknife) to reduce boilerplate code.
 * [x] Apply rounded corners for the poster or background images using [Picasso transformations](https://guides.codepath.com/android/Displaying-Images-with-the-Picasso-Library#other-transformations)
 
-The following **additional** features are implemented:
-
-* [ ] List anything else that you can get done to improve the app functionality!
-
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://imgur.com/a/HiAjQ' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/mj5DnVs.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<img src='http://imgur.com/a/BlZqg' />
+<img src='i.imgur.com/8L96Zls.gif' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
-
-## Notes
-
-Describe any challenges encountered while building the app.
 
 ## Open-source libraries used
 
