@@ -6,7 +6,7 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.codepath.nytsearch.Article;
+import com.codepath.nytsearch.models.Article;
 import com.codepath.nytsearch.R;
 
 import org.parceler.Parcels;
