@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">NYT Archive</string>
+    <string name="hint">Enter search query</string>
+    <string name="search">Search</string>
+    <string name="filter">Filter</string>
+    <string name="sports">Sports</string>
+    <string name="style">Style</string>
+    <string name="arts">Arts</string>
+    <string name="categories">Categories</string>
+    <string name="begin_date">Begin date</string>
+    <string name="order_by">Order by</string>
+    <string name="share">Share</string>
+    <string name="loading">Loading...</string>
+    <string name="done">Done</string>
+    <string name="anytime">Anytime</string>
+</resources>
