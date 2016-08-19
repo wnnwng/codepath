@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/miSearch"
+        android:orderInCategory="5"
+        android:title="@string/search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:onClick="onSearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+    <item
+        android:id="@+id/miActionProgress"
+        android:title="@string/loading"
+        android:visible="false"
+        android:orderInCategory="100"
+        app:showAsAction="always"
+        app:actionLayout="@layout/action_view_progress" />
+    <item
+        android:id="@+id/miProfile"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_profile"
+        android:onClick="onProfileView"
+        android:title="@string/view_profile">
+    </item>
+    <item
+        android:id="@+id/miCompose"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_compose"
+        android:onClick="onComposeTweet"
+        android:title="@string/compose_tweet">
+    </item>
+</menu>
